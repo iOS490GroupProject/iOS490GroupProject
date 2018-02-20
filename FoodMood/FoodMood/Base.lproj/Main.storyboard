@@ -177,26 +177,17 @@
             </objects>
             <point key="canvasLocation" x="1442" y="-11"/>
         </scene>
-        <!--View Controller-->
+        <!--Home page-->
         <scene sceneID="7cM-pz-cNz">
             <objects>
                 <viewController id="qi9-t4-Hkp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4NU-v1-SZj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PROFILE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVj-JG-L6Z">
-                                <rect key="frame" x="166" y="171" width="67" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="lwr-9Y-ucx"/>
                     </view>
-                    <navigationItem key="navigationItem" id="r1M-cC-O6x"/>
+                    <navigationItem key="navigationItem" title="Home page" id="r1M-cC-O6x"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zSK-gc-Dlo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -230,13 +221,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HOME PAGE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmZ-RD-8Ig">
-                                <rect key="frame" x="139" y="134" width="96" height="21"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sRR-1O-ddu">
+                                <rect key="frame" x="-10" y="0.0" width="385" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="feG-vk-6Ie"/>
@@ -245,50 +233,35 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="92j-Gz-jAV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="625" y="1911"/>
+            <point key="canvasLocation" x="624.79999999999995" y="1910.1949025487258"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile page-->
         <scene sceneID="k7G-4s-bRE">
             <objects>
                 <viewController id="dOp-yd-b4u" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2rR-Qq-75b">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="S50-wR-wMF">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </mapView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="xa9-gX-mpM"/>
                     </view>
-                    <navigationItem key="navigationItem" id="quk-85-k6o"/>
+                    <navigationItem key="navigationItem" title="Profile page" id="quk-85-k6o"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yd6-KH-Tg8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4372" y="1842"/>
         </scene>
-        <!--View Controller-->
+        <!--Messages-->
         <scene sceneID="Tn5-yZ-GKv">
             <objects>
                 <viewController id="Dw2-bT-K5r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y6u-MH-Apd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CHAT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9R-da-2zM">
-                                <rect key="frame" x="150" y="227" width="45" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="If3-22-cWi"/>
                     </view>
-                    <navigationItem key="navigationItem" id="2bt-XI-Uig"/>
+                    <navigationItem key="navigationItem" title="Messages" id="2bt-XI-Uig"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cFK-5n-gIm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
