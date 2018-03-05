@@ -18,6 +18,7 @@
 		D401C5D3203B989B006B1A11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D401C5D1203B989B006B1A11 /* LaunchScreen.storyboard */; };
 		D401C5DE203B989B006B1A11 /* FoodMoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D401C5DD203B989B006B1A11 /* FoodMoodTests.swift */; };
 		D401C5E9203B989B006B1A11 /* FoodMoodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D401C5E8203B989B006B1A11 /* FoodMoodUITests.swift */; };
+		D4AA9732204E0824008F3371 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AA9731204E0824008F3371 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		D401C5E4203B989B006B1A11 /* FoodMoodUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodMoodUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D401C5E8203B989B006B1A11 /* FoodMoodUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodMoodUITests.swift; sourceTree = "<group>"; };
 		D401C5EA203B989B006B1A11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4AA9731204E0824008F3371 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 				D401C5D1203B989B006B1A11 /* LaunchScreen.storyboard */,
 				D401C5D4203B989B006B1A11 /* Info.plist */,
 				20418D82203E36B10013FC26 /* GoogleService-Info.plist */,
+				D4AA9731204E0824008F3371 /* LoginViewController.swift */,
 			);
 			path = FoodMood;
 			sourceTree = "<group>";
@@ -363,12 +366,26 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FoodMood/Pods-FoodMood-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,9 +435,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FoodMood/Pods-FoodMood-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -464,6 +484,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4AA9732204E0824008F3371 /* LoginViewController.swift in Sources */,
 				D401C5CB203B989B006B1A11 /* ViewController.swift in Sources */,
 				D401C5C9203B989B006B1A11 /* AppDelegate.swift in Sources */,
 			);

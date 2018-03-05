@@ -8,6 +8,13 @@ target 'FoodMood' do
   # Pods for FoodMood
     
     pod 'Firebase/Core'
+    pod 'Firebase/Auth'
+    pod 'Firebase/Database'
+    pod 'Firebase/Storage'
+    pod 'GoogleSignIn'
+    pod 'FBSDKCoreKit'
+    pod 'FBSDKShareKit'
+    pod 'FBSDKLoginKit'
 
   target 'FoodMoodTests' do
     inherit! :search_paths
