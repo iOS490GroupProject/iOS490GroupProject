@@ -66,7 +66,8 @@
                                 <color key="backgroundColor" red="0.86415155440414504" green="0.86415155440414504" blue="0.86415155440414504" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Sign in"/>
                                 <connections>
-                                    <segue destination="orJ-Kz-REL" kind="presentation" id="zht-ZA-Lco"/>
+                                    <action selector="signInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S68-Tc-dRH"/>
+                                    <segue destination="orJ-Kz-REL" kind="presentation" identifier="tabBar" id="zht-ZA-Lco"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v2T-rY-L6M">
@@ -75,7 +76,8 @@
                                 <color key="backgroundColor" red="0.89987451424870468" green="0.89987451424870468" blue="0.89987451424870468" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Sign up"/>
                                 <connections>
-                                    <segue destination="XcK-iy-hSh" kind="presentation" id="wcr-dO-Wie"/>
+                                    <action selector="signUpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iXg-FJ-rc1"/>
+                                    <segue destination="XcK-iy-hSh" kind="presentation" identifier="GoToHome" id="wcr-dO-Wie"/>
                                 </connections>
                             </button>
                         </subviews>
