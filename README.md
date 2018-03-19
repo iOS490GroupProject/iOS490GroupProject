@@ -15,6 +15,7 @@ The following **required** functionality is completed:
 - [ ] I would like to view a news feed of user uploaded photos of food
 - [ ] I would like to tap on a photo to view the details
 - [ ] I would like to view nearby restaurants
+
 - [ ] I would like to view nearby groceries
 - [ ] I would like to chat with people and share recipes
 - [ ] I would like to use the app on different iOS devices
