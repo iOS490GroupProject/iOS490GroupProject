@@ -17,11 +17,11 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,7 +34,6 @@ class LoginViewController: UIViewController {
         
         if let email = emailField.text, let password = passwordField.text
         {
-            //Auth.auth().signIn(with: <#T##AuthCredential#>, completion: <#T##AuthResultCallback?##AuthResultCallback?##(User?, Error?) -> Void#>)
             Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
                 
                 if let u = user
@@ -45,18 +44,14 @@ class LoginViewController: UIViewController {
                 {
                     
                 }
-                
             }
         }
-        
         
     }
     
     
     @IBAction func signUpButton(_ sender: Any)
     {
-        //Auth.auth().createUser(withEmail: <#T##String#>, password: <#T##String#>, completion: <#T##AuthResultCallback?##AuthResultCallback?##(User?, Error?) -> Void#>)
-        
         if let email = emailField.text, let password = passwordField.text
         {
             Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
@@ -69,9 +64,7 @@ class LoginViewController: UIViewController {
                 {
                     
                 }
-                
             }
         }
-        
     }
 }
