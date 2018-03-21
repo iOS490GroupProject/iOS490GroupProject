@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		121DA2DCEDB0D924023FF850 /* Pods_FoodMoodUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572F03344237C211B5794DEA /* Pods_FoodMoodUITests.framework */; };
 		20418D83203E36B10013FC26 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 20418D82203E36B10013FC26 /* GoogleService-Info.plist */; };
+		204EC6232063192B0049E9EF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204EC6222063192B0049E9EF /* ProfileViewController.swift */; };
+		204EC625206319340049E9EF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204EC624206319340049E9EF /* HomeViewController.swift */; };
 		274C39BCBF3715871F708501 /* Pods_FoodMoodTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90DA3DA04CC24C05FC0BC94D /* Pods_FoodMoodTests.framework */; };
 		A799C26EF342E7C67D292144 /* Pods_FoodMood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE0DA6C6364D36AD374C387 /* Pods_FoodMood.framework */; };
 		D401C5C9203B989B006B1A11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D401C5C8203B989B006B1A11 /* AppDelegate.swift */; };
-		D401C5CB203B989B006B1A11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D401C5CA203B989B006B1A11 /* ViewController.swift */; };
 		D401C5CE203B989B006B1A11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D401C5CC203B989B006B1A11 /* Main.storyboard */; };
 		D401C5D0203B989B006B1A11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D401C5CF203B989B006B1A11 /* Assets.xcassets */; };
 		D401C5D3203B989B006B1A11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D401C5D1203B989B006B1A11 /* LaunchScreen.storyboard */; };
@@ -41,6 +42,8 @@
 /* Begin PBXFileReference section */
 		1B4700925890CDAD21E42A2A /* Pods-FoodMood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodMood.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodMood/Pods-FoodMood.debug.xcconfig"; sourceTree = "<group>"; };
 		20418D82203E36B10013FC26 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		204EC6222063192B0049E9EF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		204EC624206319340049E9EF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3FB6AA8C07BEB0CEE5F112A9 /* Pods-FoodMoodTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodMoodTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodMoodTests/Pods-FoodMoodTests.debug.xcconfig"; sourceTree = "<group>"; };
 		572F03344237C211B5794DEA /* Pods_FoodMoodUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodMoodUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C98F6DEC3B4E8693805199A /* Pods-FoodMoodUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodMoodUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodMoodUITests/Pods-FoodMoodUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -51,7 +54,6 @@
 		C2C72B4C87CE3907A0DFCB0A /* Pods-FoodMood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodMood.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodMood/Pods-FoodMood.release.xcconfig"; sourceTree = "<group>"; };
 		D401C5C5203B989B006B1A11 /* FoodMood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodMood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D401C5C8203B989B006B1A11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D401C5CA203B989B006B1A11 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D401C5CD203B989B006B1A11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D401C5CF203B989B006B1A11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D401C5D2203B989B006B1A11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -93,6 +95,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		204EC621206319070049E9EF /* View controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D4AA9731204E0824008F3371 /* LoginViewController.swift */,
+				204EC6222063192B0049E9EF /* ProfileViewController.swift */,
+				204EC624206319340049E9EF /* HomeViewController.swift */,
+			);
+			path = "View controllers";
+			sourceTree = "<group>";
+		};
 		3224CCC279A7D670364E9013 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,14 +153,13 @@
 		D401C5C7203B989B006B1A11 /* FoodMood */ = {
 			isa = PBXGroup;
 			children = (
+				204EC621206319070049E9EF /* View controllers */,
 				D401C5C8203B989B006B1A11 /* AppDelegate.swift */,
-				D401C5CA203B989B006B1A11 /* ViewController.swift */,
 				D401C5CC203B989B006B1A11 /* Main.storyboard */,
 				D401C5CF203B989B006B1A11 /* Assets.xcassets */,
 				D401C5D1203B989B006B1A11 /* LaunchScreen.storyboard */,
 				D401C5D4203B989B006B1A11 /* Info.plist */,
 				20418D82203E36B10013FC26 /* GoogleService-Info.plist */,
-				D4AA9731204E0824008F3371 /* LoginViewController.swift */,
 			);
 			path = FoodMood;
 			sourceTree = "<group>";
@@ -367,26 +378,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FoodMood/Pods-FoodMood-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -484,9 +481,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				204EC6232063192B0049E9EF /* ProfileViewController.swift in Sources */,
 				D4AA9732204E0824008F3371 /* LoginViewController.swift in Sources */,
-				D401C5CB203B989B006B1A11 /* ViewController.swift in Sources */,
 				D401C5C9203B989B006B1A11 /* AppDelegate.swift in Sources */,
+				204EC625206319340049E9EF /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,7 +13,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="FoodMood" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LoginViewController" customModule="FoodMood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,7 +67,6 @@
                                 <state key="normal" title="Sign in"/>
                                 <connections>
                                     <action selector="signInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S68-Tc-dRH"/>
-                                    <segue destination="orJ-Kz-REL" kind="presentation" identifier="tabBar" id="zht-ZA-Lco"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v2T-rY-L6M">
@@ -87,6 +86,7 @@
                     <connections>
                         <outlet property="emailField" destination="Nj1-Qk-PWq" id="Lfc-dD-hbp"/>
                         <outlet property="passwordField" destination="rEc-dm-5bX" id="T3J-tw-hiW"/>
+                        <segue destination="orJ-Kz-REL" kind="show" identifier="tabBar" id="d6z-i1-YHJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -186,23 +186,29 @@
         <!--Home page-->
         <scene sceneID="7cM-pz-cNz">
             <objects>
-                <viewController id="qi9-t4-Hkp" sceneMemberID="viewController">
+                <viewController id="qi9-t4-Hkp" customClass="HomeViewController" customModule="FoodMood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4NU-v1-SZj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="lwr-9Y-ucx"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Home page" id="r1M-cC-O6x"/>
+                    <navigationItem key="navigationItem" title="Home page" id="r1M-cC-O6x">
+                        <barButtonItem key="leftBarButtonItem" title="Log out" id="X3U-Hq-zyw">
+                            <connections>
+                                <action selector="loggedOut:" destination="qi9-t4-Hkp" id="PjY-M1-YOQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zSK-gc-Dlo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1441" y="1910"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--tabVC-->
         <scene sceneID="a90-WC-UcN">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="orJ-Kz-REL" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabVC" title="tabVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="orJ-Kz-REL" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Pa1-k0-3tW">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -235,7 +241,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="feG-vk-6Ie"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Nearby Restaurants" id="2AH-28-cNO"/>
+                    <navigationItem key="navigationItem" title="Nearby Restaurants" id="2AH-28-cNO">
+                        <barButtonItem key="leftBarButtonItem" title="Log out" id="wzv-M4-MML"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="92j-Gz-jAV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -244,7 +252,7 @@
         <!--<username>-->
         <scene sceneID="k7G-4s-bRE">
             <objects>
-                <viewController id="dOp-yd-b4u" sceneMemberID="viewController">
+                <viewController id="dOp-yd-b4u" customClass="ProfileViewController" customModule="FoodMood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2rR-Qq-75b">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -279,6 +287,11 @@
                         <viewLayoutGuide key="safeArea" id="xa9-gX-mpM"/>
                     </view>
                     <navigationItem key="navigationItem" title="&lt;username&gt;" id="quk-85-k6o">
+                        <barButtonItem key="leftBarButtonItem" title="Log Out" id="NHa-kS-thr">
+                            <connections>
+                                <action selector="loggedOut:" destination="dOp-yd-b4u" id="xsW-O8-qxA"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" systemItem="edit" id="M5a-MM-woK">
                             <connections>
                                 <segue destination="c6g-PJ-5dU" kind="show" id="bQI-G1-6zd"/>
@@ -392,6 +405,6 @@
         <image name="Webp.net-resizeimage (2)" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2c7-zw-ghe"/>
+        <segue reference="d6z-i1-YHJ"/>
     </inferredMetricsTieBreakers>
 </document>

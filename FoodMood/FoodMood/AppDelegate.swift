@@ -7,18 +7,55 @@
 //
 
 import UIKit
-import Firebase
+import Parse
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-         FirebaseApp.configure()
+        
+        Parse.initialize(
+            with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) -> Void in
+                configuration.applicationId = "myAppId"
+                configuration.clientKey = "myMasterKey"  // set to nil assuming you have not set clientKey
+                configuration.server = "https://peaceful-oasis-54900.herokuapp.com/parse"
+            })
+        )
+        
+        if let currentUser = PFUser.current()
+        {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let profileViewController = storyboard.instantiateViewController(withIdentifier: "tabVC")
+            window?.rootViewController = profileViewController
+            
+        }
+        
+        NotificationCenter.default.addObserver(forName: Notification.Name("didLogout"), object: nil, queue: OperationQueue.main) { (Notification) in
+            print("Logout notification received")
+            self.logOut()
+        }
+        
         return true
+    }
+    
+    func logOut()
+    {
+        
+        
+        PFUser.logOutInBackground(block: { (error) in
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                print("Successful loggout")
+                
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
+                self.window?.rootViewController = loginViewController
+            }
+        })
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
