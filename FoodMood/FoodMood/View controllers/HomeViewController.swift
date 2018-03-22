@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import Parse
+import Firebase
+import FirebaseAuth
 
 class HomeViewController: UIViewController {
     
@@ -19,7 +20,12 @@ class HomeViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         let logoutAction = UIAlertAction(title: "Log Out", style: .destructive) { (action) in
-            NotificationCenter.default.post(name: NSNotification.Name("didLogout"), object: nil)
+            try! Auth.auth().signOut()
+            if let storyboard = self.storyboard {
+                let vc = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! UIViewController
+                self.present(vc, animated: false, completion: nil)
+            }
+
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in

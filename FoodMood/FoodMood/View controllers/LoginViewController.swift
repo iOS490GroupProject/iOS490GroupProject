@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import Parse
+import Firebase
+import FirebaseAuth
 
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
@@ -15,23 +16,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
-    
-    let userExistsAlert = UIAlertController(title: "Username Exists", message: "This username already exists", preferredStyle: .alert)
-    let invalidAlert = UIAlertController(title: "Invalid username or password ", message: "The username or password is invalid. Please try again.", preferredStyle: .alert)
-    
+    var userUid: String!
+
     override func viewDidLoad()
     {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let OKAction = UIAlertAction(title: "OK", style: .destructive) { (action) in
-            
-        }
-        self.userExistsAlert.addAction(OKAction)
-        self.invalidAlert.addAction(OKAction)
-        
-//        emailField.delegate = self
-//        passwordField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,45 +32,116 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func signInButton(_ sender: Any)
     {
-        let username = emailField.text ?? ""
-        let password = passwordField.text ?? ""
-        
-        PFUser.logInWithUsername(inBackground: username, password: password) { (user: PFUser?, error: Error?) in
-            if let error = error {
-                print("User log in failed: \(error.localizedDescription)")
-                self.present(self.invalidAlert, animated: true) {
+        if let email = emailField.text, let password = passwordField.text
+        {
+            print("...here.....")
+            Auth.auth().signIn(withEmail: email, password: password, completion: {(user,error) in
+                if (error == nil) {
+                    print ("......null error?....")
+                    if let user = user {
+                        let databaseRef = Database.database().reference();
+                        let userID = Auth.auth().currentUser!.uid
+                        AllVariables.uid = userID
+                        print(userID)
+                        
+                        databaseRef.child("Users").child("UserDetails").observeSingleEvent(of: DataEventType.value, with: { snapshotA in
+                            if snapshotA.hasChild(AllVariables.uid) {
+                                 databaseRef.child("Users").child("UserDetails").child(AllVariables.uid).observeSingleEvent(of: DataEventType.value, with: { (snapshotB) in
+                                    print("HERE")
+                                  
+                                    let value = snapshotB.value as? NSDictionary
+                                    AllVariables.Username = value?["Username"] as? String ?? ""
+                                    AllVariables.Fname = value?["Fname"] as? String ?? ""
+                                    AllVariables.Lname = value?["Lname"] as? String ?? ""
+                                    AllVariables.Bio = value?["Bio"] as? String ?? ""
+                                   // AllVariables.profpic = value?["profile_pic"] as? String ?? ""
+//                                    databaseRef.child("Users").child("Student").child(AllVariables.uid).child("Courses").observeSingleEvent(of: DataEventType.value, with: { (snapshotCourse) in
+//                                        let counter = 0;
+//                                        let enumer = snapshotCourse.children
+////                                        while let rest = enumer.nextObject() as? DataSnapshot {
+////                                            AllVariables.courses.append(rest.value as! String)
+////                                        }
+//                                    })
+                                    
+                                })
+                                self.userUid = user.uid
+                                self.performSegue(withIdentifier: "signingIn", sender: self)
+                            }
+                    
+                        })
+                    }
+                }         else {
+                    let alert = UIAlertController(title: "Sign in error", message: "error signing in", preferredStyle: .alert)
+                    let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+                        print ("ok tappped")
+                    }
+                    alert.addAction(OKAction)
+                    self.present(alert, animated: true) {
+                        print("ERROR")
+                    }
+                    print("error signing in \(error)")
                 }
-            } else {
-                print("User logged in successfully")
-                self.performSegue(withIdentifier: "tabBar", sender: nil)
-            }
+            })
         }
+
         
     }
     
     
     @IBAction func signUpButton(_ sender: Any)
     {
-        let newUser = PFUser()
-        
-        newUser.username = emailField.text
-        newUser.password = passwordField.text
-        
-        newUser.signUpInBackground { (success: Bool, error: Error?) in
-            if let error = error {
-                print(error.localizedDescription)
-                if String(describing: error.localizedDescription).contains("Account already exists for this username.") {
-                    print("This user already has an account!!")
-                    
-                    self.present(self.userExistsAlert, animated: true) {
-                    }
+     
+        Auth.auth().createUser(withEmail: emailField.text!, password: passwordField.text!, completion: { (user,error) in
+            if error != nil
+            {
+                let alert = UIAlertController(title: "Error", message: "can not create user", preferredStyle: .alert)
+                let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+                    print ("ok tappped")
                 }
                 
-            } else {
-                print("User Registered successfully")
-                self.performSegue(withIdentifier: "GoToHome", sender: nil)
+                alert.addAction(OKAction)
+                self.present(alert, animated: true) {
+                    print("ERROR")
+                }
+                print("can not create user \(error)")
             }
-        }
+            else
+            {
+                if let user = user
+                {
+                    self.userUid = user.uid
+                    print (".....!!!!!!....\(self.userUid)....")
+                    
+                    let changeRequest = user.createProfileChangeRequest()
+                    
+                    changeRequest.displayName = self.emailField.text
+                    
+                    changeRequest.commitChanges { error in
+                        if let error = error
+                        {
+                            let alert = UIAlertController(title: "Error", message: "error registering user", preferredStyle: .alert)
+                            let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+                                print ("ok tappped")
+                            }
+                            alert.addAction(OKAction)
+                            self.present(alert, animated: true) {
+                                print("ERROR")
+                            }
+                            print("error registering user")
+                            print(error)
+                            
+                        }
+                        else
+                        {
+                            print("Success registering user!")
+                            self.performSegue(withIdentifier: "goToHome", sender: self)
+                        }
+                    }
+                }
+            }
+            
+        })
+
         
     }
 }
