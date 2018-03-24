@@ -9,7 +9,7 @@ Time spent: **X** hours spent in total
 The following **required** functionality is completed:
 
 - [x] I would like to create an account
-- [ ] I would like to upload my profile photo
+- [x] I would like to upload my profile photo
 - [ ] I would like to view recipes based on food items
 - [ ] I would like to upload photos of the dishes i cook
 - [ ] I would like to view a news feed of user uploaded photos of food
