@@ -12,6 +12,7 @@
 		204EC6232063192B0049E9EF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204EC6222063192B0049E9EF /* ProfileViewController.swift */; };
 		204EC625206319340049E9EF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204EC624206319340049E9EF /* HomeViewController.swift */; };
 		274C39BCBF3715871F708501 /* Pods_FoodMoodTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90DA3DA04CC24C05FC0BC94D /* Pods_FoodMoodTests.framework */; };
+		666D452E2066F3AD001C81F0 /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666D452D2066F3AD001C81F0 /* EditProfileVC.swift */; };
 		A799C26EF342E7C67D292144 /* Pods_FoodMood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE0DA6C6364D36AD374C387 /* Pods_FoodMood.framework */; };
 		D401C5C9203B989B006B1A11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D401C5C8203B989B006B1A11 /* AppDelegate.swift */; };
 		D401C5CE203B989B006B1A11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D401C5CC203B989B006B1A11 /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 		204EC624206319340049E9EF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3FB6AA8C07BEB0CEE5F112A9 /* Pods-FoodMoodTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodMoodTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodMoodTests/Pods-FoodMoodTests.debug.xcconfig"; sourceTree = "<group>"; };
 		572F03344237C211B5794DEA /* Pods_FoodMoodUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodMoodUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		666D452D2066F3AD001C81F0 /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
 		7C98F6DEC3B4E8693805199A /* Pods-FoodMoodUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodMoodUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodMoodUITests/Pods-FoodMoodUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7E5EB3B908FE7449E6EB197F /* Pods-FoodMoodUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodMoodUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodMoodUITests/Pods-FoodMoodUITests.release.xcconfig"; sourceTree = "<group>"; };
 		90DA3DA04CC24C05FC0BC94D /* Pods_FoodMoodTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodMoodTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,6 +163,7 @@
 				204EC621206319070049E9EF /* View controllers */,
 				D401C5C8203B989B006B1A11 /* AppDelegate.swift */,
 				D401C5CC203B989B006B1A11 /* Main.storyboard */,
+				666D452D2066F3AD001C81F0 /* EditProfileVC.swift */,
 				D401C5CF203B989B006B1A11 /* Assets.xcassets */,
 				D401C5D1203B989B006B1A11 /* LaunchScreen.storyboard */,
 				D401C5D4203B989B006B1A11 /* Info.plist */,
@@ -499,6 +502,7 @@
 				204EC6232063192B0049E9EF /* ProfileViewController.swift in Sources */,
 				D4AA9732204E0824008F3371 /* LoginViewController.swift in Sources */,
 				D401C5C9203B989B006B1A11 /* AppDelegate.swift in Sources */,
+				666D452E2066F3AD001C81F0 /* EditProfileVC.swift in Sources */,
 				204EC625206319340049E9EF /* HomeViewController.swift in Sources */,
 				D4B2D39D20633A08000B8836 /* DetailsViewController.swift in Sources */,
 			);

@@ -16,10 +16,24 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var Name: UILabel!
     @IBOutlet weak var bio: UILabel!
     @IBOutlet weak var navBar: UINavigationItem!
+    var loggedInUser: AnyObject?
+    var databaseRef = Database.database().reference()
+    var storageRef = Storage.storage().reference()
+    var image: UIImageView!
     
+    @IBOutlet weak var updateBioText: UILabel!
     @IBOutlet weak var profilePic: UIImageView!
     
+    
     let logoutAlert = UIAlertController(title: "Confirm", message: "Are you sure you want to log out?", preferredStyle: .alert)
+    
+    func setProfilePicture(imageView:UIImageView, imageToSet:UIImage)
+    {
+        imageView.layer.cornerRadius = 10.0
+        imageView.layer.borderColor = UIColor.white.cgColor
+        imageView.layer.masksToBounds = true
+        imageView.image = imageToSet
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +41,6 @@ class ProfileViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         navBar.title = "\(AllVariables.Username)"
-        
-        
         
         let logoutAction = UIAlertAction(title: "Log Out", style: .destructive) { (action) in
             try! Auth.auth().signOut()
@@ -47,7 +59,7 @@ class ProfileViewController: UIViewController {
         user.text = AllVariables.Username
         Name.text = "\(AllVariables.Fname) \(AllVariables.Lname)"
         user.text = "@\(AllVariables.Username)"
-        bio.text = AllVariables.Bio
+        //bio.text = AllVariables.Bio
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,6 +67,15 @@ class ProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        updateBioText.text = AllVariables.Bio
+        var databaseProfilePic = AllVariables.profpic
+        let data = NSData(contentsOf: NSURL(string: databaseProfilePic)! as URL)
+        if (AllVariables.profpic != "") {
+            setProfilePicture(imageView: self.profilePic,imageToSet:UIImage(data: data! as Data)!)
+        }
+
+    }
 
     @IBAction func loggedOut(_ sender: Any) {
         
