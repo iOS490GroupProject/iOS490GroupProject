@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		121DA2DCEDB0D924023FF850 /* Pods_FoodMoodUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572F03344237C211B5794DEA /* Pods_FoodMoodUITests.framework */; };
 		20418D83203E36B10013FC26 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 20418D82203E36B10013FC26 /* GoogleService-Info.plist */; };
+		204919A72067118B00B98685 /* SearchRestaurantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204919A62067118B00B98685 /* SearchRestaurantsViewController.swift */; };
 		204EC6232063192B0049E9EF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204EC6222063192B0049E9EF /* ProfileViewController.swift */; };
 		204EC625206319340049E9EF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204EC624206319340049E9EF /* HomeViewController.swift */; };
 		274C39BCBF3715871F708501 /* Pods_FoodMoodTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90DA3DA04CC24C05FC0BC94D /* Pods_FoodMoodTests.framework */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		1B4700925890CDAD21E42A2A /* Pods-FoodMood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodMood.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodMood/Pods-FoodMood.debug.xcconfig"; sourceTree = "<group>"; };
 		20418D82203E36B10013FC26 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		204919A62067118B00B98685 /* SearchRestaurantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRestaurantsViewController.swift; sourceTree = "<group>"; };
 		204EC6222063192B0049E9EF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		204EC624206319340049E9EF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3FB6AA8C07BEB0CEE5F112A9 /* Pods-FoodMoodTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodMoodTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodMoodTests/Pods-FoodMoodTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				204EC621206319070049E9EF /* View controllers */,
 				D401C5C8203B989B006B1A11 /* AppDelegate.swift */,
 				D401C5CC203B989B006B1A11 /* Main.storyboard */,
+				204919A62067118B00B98685 /* SearchRestaurantsViewController.swift */,
 				666D452D2066F3AD001C81F0 /* EditProfileVC.swift */,
 				D401C5CF203B989B006B1A11 /* Assets.xcassets */,
 				D401C5D1203B989B006B1A11 /* LaunchScreen.storyboard */,
@@ -386,6 +389,8 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FoodMood/Pods-FoodMood-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/BDBOAuth1Manager/BDBOAuth1Manager.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
@@ -395,6 +400,8 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BDBOAuth1Manager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
@@ -499,6 +506,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4B2D39B20633856000B8836 /* AllVariables.swift in Sources */,
+				204919A72067118B00B98685 /* SearchRestaurantsViewController.swift in Sources */,
 				204EC6232063192B0049E9EF /* ProfileViewController.swift in Sources */,
 				D4AA9732204E0824008F3371 /* LoginViewController.swift in Sources */,
 				D401C5C9203B989B006B1A11 /* AppDelegate.swift in Sources */,

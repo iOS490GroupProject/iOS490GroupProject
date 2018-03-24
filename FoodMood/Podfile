@@ -12,6 +12,8 @@ target 'FoodMood' do
     pod 'Firebase/Database'
     pod 'Firebase/Storage'
     pod 'Parse'
+    pod 'AFNetworking', '~> 2.5'
+    pod 'BDBOAuth1Manager'
 
   target 'FoodMoodTests' do
     inherit! :search_paths

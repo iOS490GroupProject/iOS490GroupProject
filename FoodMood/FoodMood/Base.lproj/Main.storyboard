@@ -237,7 +237,7 @@
         <!--Nearby Restaurants-->
         <scene sceneID="eZu-Oz-3hj">
             <objects>
-                <viewController id="MZQ-9m-gu6" sceneMemberID="viewController">
+                <viewController id="MZQ-9m-gu6" customClass="SearchRestaurantsViewController" customModule="FoodMood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BZc-NH-zRg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -245,14 +245,25 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sRR-1O-ddu">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="MZQ-9m-gu6" id="eVf-BI-X3Z"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="feG-vk-6Ie"/>
                     </view>
                     <navigationItem key="navigationItem" title="Nearby Restaurants" id="2AH-28-cNO">
-                        <barButtonItem key="leftBarButtonItem" title="Log out" id="wzv-M4-MML"/>
+                        <barButtonItem key="leftBarButtonItem" id="wzv-M4-MML"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="wlk-ww-q5V">
+                            <connections>
+                                <action selector="searchButton:" destination="MZQ-9m-gu6" id="pnx-Ww-Hol"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="sRR-1O-ddu" id="L52-EF-R2A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="92j-Gz-jAV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
