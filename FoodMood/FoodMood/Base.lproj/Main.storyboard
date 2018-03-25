@@ -218,19 +218,20 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="T6N-2V-5aE" customClass="PhotoCell" customModule="FoodMood" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="PhotoCell" reuseIdentifier="PhotoCell" id="T6N-2V-5aE" customClass="PhotoCell" customModule="FoodMood" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="110" height="105"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="110" height="105"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dpn-dr-uWY">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dpn-dr-uWY">
                                                     <rect key="frame" x="0.0" y="0.0" width="110" height="105"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
+                                        <color key="backgroundColor" red="0.1707904281" green="0.51441091189999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="myImage" destination="dpn-dr-uWY" id="BDQ-EM-vMf"/>
                                             <segue destination="1Ge-6V-Cdi" kind="show" id="LMH-Pk-Ybi"/>
@@ -254,6 +255,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="BuQ-fd-2jR" id="yVb-d8-5S2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zSK-gc-Dlo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -504,20 +508,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmC-BJ-NjL">
-                                <rect key="frame" x="128" y="325" width="226" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0gd-h1-pOa">
                                 <rect key="frame" x="96" y="99" width="183" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.50736549799999997" green="0.69447472779999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UjL-Pu-Q52">
+                                <rect key="frame" x="118" y="323" width="236" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="GSt-wg-hST"/>
@@ -525,6 +529,7 @@
                     <navigationItem key="navigationItem" id="thG-hh-nAA"/>
                     <connections>
                         <outlet property="caption" destination="EaA-5a-h2a" id="ZGw-VK-V4c"/>
+                        <outlet property="titleField" destination="UjL-Pu-Q52" id="jit-Fn-FVJ"/>
                         <outlet property="uploadImage" destination="0gd-h1-pOa" id="SPx-xB-dbB"/>
                     </connections>
                 </viewController>
@@ -596,6 +601,7 @@ Combine egg, milk, oil. Add to dry. Stir until moistened.</string>
                         <viewLayoutGuide key="safeArea" id="Hmq-aa-nPj"/>
                     </view>
                     <connections>
+                        <outlet property="myTitle" destination="uA1-yQ-Aao" id="Tel-dr-HcI"/>
                         <outlet property="photo" destination="wTu-CY-zPv" id="6GS-GR-JWi"/>
                         <outlet property="recipe" destination="VUL-CJ-7U5" id="tlf-SC-eVJ"/>
                         <outlet property="username" destination="RY8-3X-M6a" id="BnX-dz-uvv"/>

@@ -15,6 +15,7 @@ struct AllVariables {
     static var Bio: String  = ""
     static var uid: String = ""
     static var profpic: String = ""
+    static var photos = [String]()
    
 }
 
