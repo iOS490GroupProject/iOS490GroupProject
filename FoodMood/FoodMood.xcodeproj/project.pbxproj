@@ -21,6 +21,9 @@
 		D401C5D3203B989B006B1A11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D401C5D1203B989B006B1A11 /* LaunchScreen.storyboard */; };
 		D401C5DE203B989B006B1A11 /* FoodMoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D401C5DD203B989B006B1A11 /* FoodMoodTests.swift */; };
 		D401C5E9203B989B006B1A11 /* FoodMoodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D401C5E8203B989B006B1A11 /* FoodMoodUITests.swift */; };
+		D414ACD42067FF7800D08087 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D414ACD32067FF7800D08087 /* PhotoCell.swift */; };
+		D414ACD62067FF9200D08087 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D414ACD52067FF9200D08087 /* PhotoDetailViewController.swift */; };
+		D414ACD82067FF9F00D08087 /* AddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D414ACD72067FF9F00D08087 /* AddPhotoViewController.swift */; };
 		D4AA9732204E0824008F3371 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AA9731204E0824008F3371 /* LoginViewController.swift */; };
 		D4B2D39B20633856000B8836 /* AllVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B2D39A20633856000B8836 /* AllVariables.swift */; };
 		D4B2D39D20633A08000B8836 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B2D39C20633A08000B8836 /* DetailsViewController.swift */; };
@@ -70,6 +73,9 @@
 		D401C5E4203B989B006B1A11 /* FoodMoodUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodMoodUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D401C5E8203B989B006B1A11 /* FoodMoodUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodMoodUITests.swift; sourceTree = "<group>"; };
 		D401C5EA203B989B006B1A11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D414ACD32067FF7800D08087 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		D414ACD52067FF9200D08087 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		D414ACD72067FF9F00D08087 /* AddPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoViewController.swift; sourceTree = "<group>"; };
 		D4AA9731204E0824008F3371 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D4B2D39A20633856000B8836 /* AllVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllVariables.swift; sourceTree = "<group>"; };
 		D4B2D39C20633A08000B8836 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +116,8 @@
 				204EC6222063192B0049E9EF /* ProfileViewController.swift */,
 				204EC624206319340049E9EF /* HomeViewController.swift */,
 				D4B2D39C20633A08000B8836 /* DetailsViewController.swift */,
+				D414ACD52067FF9200D08087 /* PhotoDetailViewController.swift */,
+				D414ACD72067FF9F00D08087 /* AddPhotoViewController.swift */,
 			);
 			path = "View controllers";
 			sourceTree = "<group>";
@@ -172,6 +180,7 @@
 				D401C5D4203B989B006B1A11 /* Info.plist */,
 				20418D82203E36B10013FC26 /* GoogleService-Info.plist */,
 				D4B2D39A20633856000B8836 /* AllVariables.swift */,
+				D414ACD32067FF7800D08087 /* PhotoCell.swift */,
 			);
 			path = FoodMood;
 			sourceTree = "<group>";
@@ -506,12 +515,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4B2D39B20633856000B8836 /* AllVariables.swift in Sources */,
+				D414ACD42067FF7800D08087 /* PhotoCell.swift in Sources */,
 				204919A72067118B00B98685 /* SearchRestaurantsViewController.swift in Sources */,
 				204EC6232063192B0049E9EF /* ProfileViewController.swift in Sources */,
 				D4AA9732204E0824008F3371 /* LoginViewController.swift in Sources */,
 				D401C5C9203B989B006B1A11 /* AppDelegate.swift in Sources */,
+				D414ACD82067FF9F00D08087 /* AddPhotoViewController.swift in Sources */,
 				666D452E2066F3AD001C81F0 /* EditProfileVC.swift in Sources */,
 				204EC625206319340049E9EF /* HomeViewController.swift in Sources */,
+				D414ACD62067FF9200D08087 /* PhotoDetailViewController.swift in Sources */,
 				D4B2D39D20633A08000B8836 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
