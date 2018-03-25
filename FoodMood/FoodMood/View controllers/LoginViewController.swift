@@ -54,7 +54,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                                     AllVariables.Fname = value?["Fname"] as? String ?? ""
                                     AllVariables.Lname = value?["Lname"] as? String ?? ""
                                     AllVariables.Bio = value?["Bio"] as? String ?? ""
-                                   // AllVariables.profpic = value?["profile_pic"] as? String ?? ""
+                                    AllVariables.profpic = value?["profile_pic"] as? String ?? ""
 //                                    databaseRef.child("Users").child("Student").child(AllVariables.uid).child("Courses").observeSingleEvent(of: DataEventType.value, with: { (snapshotCourse) in
 //                                        let counter = 0;
 //                                        let enumer = snapshotCourse.children
