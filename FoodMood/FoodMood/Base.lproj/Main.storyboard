@@ -461,6 +461,7 @@
                                 <state key="normal" title="Upload photo"/>
                                 <connections>
                                     <action selector="profpicButton:" destination="c6g-PJ-5dU" eventType="touchUpInside" id="XL0-WU-vUd"/>
+                                    <action selector="profpicButton:" destination="RsN-LZ-ahZ" eventType="touchUpInside" id="amK-HY-Trg"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="EaA-5a-h2a">

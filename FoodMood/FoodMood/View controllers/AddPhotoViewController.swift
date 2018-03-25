@@ -29,4 +29,6 @@ class AddPhotoViewController: UIViewController {
         
     }
     
+    @IBAction func profpicButton(_ sender: Any) {
+    }
 }
