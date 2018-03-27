@@ -11,8 +11,8 @@ The following **required** functionality is completed:
 - [x] I would like to create an account
 - [x] I would like to upload my profile photo
 - [ ] I would like to view recipes based on food items
-- [ ] I would like to upload photos of the dishes i cook
-- [ ] I would like to view a news feed of user uploaded photos of food
+- [x] I would like to upload photos of the dishes i cook
+- [x] I would like to view a collection view of the photos uploaded
 - [ ] I would like to tap on a photo to view the details
 - [x] I would like to view nearby restaurants
 - [?] I would like to view nearby groceries
@@ -22,7 +22,7 @@ The following **required** functionality is completed:
 
 The following **optional** features are implemented:
 
-- [ ] I would like to view a collectionView of the photos uploaded
+- [ ] I would like to view a news feed of user uploaded photos of food
 - [ ] I would like to follow other users
 - [ ] I would like to get directions to a particular restaurant
 - [ ] I would like to write rate recipes
