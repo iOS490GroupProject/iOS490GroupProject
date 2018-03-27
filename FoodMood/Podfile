@@ -14,6 +14,7 @@ target 'FoodMood' do
     pod 'Parse'
     pod 'AFNetworking', '~> 2.5'
     pod 'BDBOAuth1Manager'
+    pod 'AlamofireImage'
 
   target 'FoodMoodTests' do
     inherit! :search_paths

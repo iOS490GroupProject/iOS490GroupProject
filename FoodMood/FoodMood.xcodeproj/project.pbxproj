@@ -29,6 +29,9 @@
 		D4AA9732204E0824008F3371 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AA9731204E0824008F3371 /* LoginViewController.swift */; };
 		D4B2D39B20633856000B8836 /* AllVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B2D39A20633856000B8836 /* AllVariables.swift */; };
 		D4B2D39D20633A08000B8836 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B2D39C20633A08000B8836 /* DetailsViewController.swift */; };
+		D4F379352069B253004D6F53 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F379342069B253004D6F53 /* Recipe.swift */; };
+		D4F379372069B402004D6F53 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F379362069B402004D6F53 /* User.swift */; };
+		D4F379392069B582004D6F53 /* FoodClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F379382069B582004D6F53 /* FoodClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +86,9 @@
 		D4AA9731204E0824008F3371 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D4B2D39A20633856000B8836 /* AllVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllVariables.swift; sourceTree = "<group>"; };
 		D4B2D39C20633A08000B8836 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		D4F379342069B253004D6F53 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		D4F379362069B402004D6F53 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D4F379382069B582004D6F53 /* FoodClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +182,7 @@
 		D401C5C7203B989B006B1A11 /* FoodMood */ = {
 			isa = PBXGroup;
 			children = (
+				D4F379332069B21C004D6F53 /* Models */,
 				204EC621206319070049E9EF /* View controllers */,
 				D401C5C8203B989B006B1A11 /* AppDelegate.swift */,
 				D401C5CC203B989B006B1A11 /* Main.storyboard */,
@@ -187,6 +194,7 @@
 				20418D82203E36B10013FC26 /* GoogleService-Info.plist */,
 				D4B2D39A20633856000B8836 /* AllVariables.swift */,
 				D414ACD32067FF7800D08087 /* PhotoCell.swift */,
+				D4F379382069B582004D6F53 /* FoodClient.swift */,
 			);
 			path = FoodMood;
 			sourceTree = "<group>";
@@ -207,6 +215,15 @@
 				D401C5EA203B989B006B1A11 /* Info.plist */,
 			);
 			path = FoodMoodUITests;
+			sourceTree = "<group>";
+		};
+		D4F379332069B21C004D6F53 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D4F379342069B253004D6F53 /* Recipe.swift */,
+				D4F379362069B402004D6F53 /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,6 +422,8 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FoodMood/Pods-FoodMood-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/BDBOAuth1Manager/BDBOAuth1Manager.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
@@ -416,6 +435,8 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BDBOAuth1Manager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
@@ -522,13 +543,16 @@
 			files = (
 				D414ACDA2068032F00D08087 /* SearchRecipeViewController.swift in Sources */,
 				D4B2D39B20633856000B8836 /* AllVariables.swift in Sources */,
+				D4F379392069B582004D6F53 /* FoodClient.swift in Sources */,
 				D414ACD42067FF7800D08087 /* PhotoCell.swift in Sources */,
 				D414ACDC2068059A00D08087 /* SearchedDetailsViewController.swift in Sources */,
 				204919A72067118B00B98685 /* SearchRestaurantsViewController.swift in Sources */,
 				204EC6232063192B0049E9EF /* ProfileViewController.swift in Sources */,
 				D4AA9732204E0824008F3371 /* LoginViewController.swift in Sources */,
 				D401C5C9203B989B006B1A11 /* AppDelegate.swift in Sources */,
+				D4F379372069B402004D6F53 /* User.swift in Sources */,
 				D414ACD82067FF9F00D08087 /* AddPhotoViewController.swift in Sources */,
+				D4F379352069B253004D6F53 /* Recipe.swift in Sources */,
 				666D452E2066F3AD001C81F0 /* EditProfileVC.swift in Sources */,
 				204EC625206319340049E9EF /* HomeViewController.swift in Sources */,
 				D414ACD62067FF9200D08087 /* PhotoDetailViewController.swift in Sources */,

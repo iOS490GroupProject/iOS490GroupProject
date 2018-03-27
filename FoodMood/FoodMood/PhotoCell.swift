@@ -7,9 +7,15 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class PhotoCell: UICollectionViewCell {
     
     @IBOutlet weak var myImage: UIImageView!
     
+    var recipe: Recipe! {
+        didSet {
+            myImage.af_setImage(withURL: URL(string: recipe.picture)!)
+        }
+    }
 }

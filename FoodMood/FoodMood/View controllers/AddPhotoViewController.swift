@@ -18,77 +18,64 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBOutlet weak var caption: UITextView!
     @IBOutlet weak var titleField: UITextField!
     
-    
-    
-    var databaseRef = Database.database().reference()
-    var storageRef = Storage.storage().reference()
-    var picture: String = ""
-    
     var imagePicker = UIImagePickerController()
-    var loggedInUser: AnyObject?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     @IBAction func saveChanges(_ sender: Any) {
-        
-        if (!AllVariables.photos.contains(titleField.text!)) {
-            let c = "Photo\(AllVariables.photos.endIndex)"
-            print(AllVariables.photos.endIndex)
-            
-            if (titleField.text != "") {
-                if (caption.text != "") {
-                
-                            AllVariables.photos.append(titleField.text!)
-                    
-                            databaseRef.child("RecipePictures").child(c).setValue(["Username": AllVariables.Username, "Title": titleField.text!, "Recipe": caption.text! ,"Photo": picture ])
-                    
-                }
-                else {
-                    let alert = UIAlertController(title: "Error", message: "Please provide a short recipe!", preferredStyle: .alert)
-                    let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
-                        print ("ok tappped")
-                    }
-                    alert.addAction(OKAction)
-                    self.present(alert, animated: true) {
-                        print("ERROR")
-                    }
-                }
-            }
-            else {
-                let alert = UIAlertController(title: "Error", message: "Please provide your dish name!", preferredStyle: .alert)
-                let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
-                    print ("ok tappped")
-                }
-                alert.addAction(OKAction)
-                self.present(alert, animated: true) {
-                    print("ERROR")
-                }
-            }
+        view.isUserInteractionEnabled = false
+        guard let title = titleField.text, !title.isEmpty else {
+            showError(title: "Error", error: "Title is empty")
+            view.isUserInteractionEnabled = true
+
+            return
         }
-        else {
-            
-            let alert = UIAlertController(title: "Error", message: "You have already posted this recipe!", preferredStyle: .alert)
-            let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
-                print ("ok tappped")
-            }
-            alert.addAction(OKAction)
-            self.present(alert, animated: true) {
-                print("ERROR")
-            }
+        
+        guard let caption = caption.text, !caption.isEmpty else {
+            showError(title: "Error", error: "Enter your recipe please!")
+            view.isUserInteractionEnabled = true
+
+            return
+        }
+        
+        guard let image = uploadImage.image else {
+            showError(title: "Error", error: "Bad image")
+            view.isUserInteractionEnabled = true
+
+            return
+        }
+        
+        
+        FoodClient.sharedInstance.createRecipe(picture: image, title: title, recipe: caption, success: { (recipe) in
+            self.view.isUserInteractionEnabled = true
+
+            self.navigationController?.popViewController(animated: true)
+        }) { (error) in
+            print (error.localizedDescription)
+            self.view.isUserInteractionEnabled = true
+
         }
         
         
         
-        
+    }
+    
+    func showError(title: String, error: String) {
+        let alert = UIAlertController(title: title, message: error, preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            print ("ok tappped")
+        }
+        alert.addAction(OKAction)
+        self.present(alert, animated: true)
     }
     
     @IBAction func profpicButton(_ sender: Any) {
@@ -143,25 +130,7 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
     @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
         setProfilePicture(imageView: self.uploadImage, imageToSet: image)
         
-        if let imageData: NSData = UIImagePNGRepresentation(self.uploadImage.image!)! as NSData
-        {
-            let profilePicStorageRef = storageRef.child("Users/recipe_pic")
-
-            let uploadTask = profilePicStorageRef.putData(imageData as Data, metadata: nil)
-            {metadata, error in
-                if (error == nil) {
-                    let downloadURL = metadata?.downloadURL()
-                    
-                    self.picture = downloadURL!.absoluteString
-                    print("successful upload")
-                }
-                else {
-                    print(error?.localizedDescription)
-                }
-                //self.imageLoader.stopAnimating()
-            }
-        }
-        self.dismiss(animated: true, completion: nil)
+        picker.dismiss(animated: true, completion: nil)
     }
     
     
