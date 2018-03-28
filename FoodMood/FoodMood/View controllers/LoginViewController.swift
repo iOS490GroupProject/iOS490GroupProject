@@ -34,10 +34,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     {
         if let email = emailField.text, let password = passwordField.text
         {
-            print("...here.....")
+            //print("...here.....")
             Auth.auth().signIn(withEmail: email, password: password, completion: {(user,error) in
                 if (error == nil) {
-                    print ("......null error?....")
+                   // print ("......null error?....")
                     if let user = user {
                         let databaseRef = Database.database().reference();
                         let userID = Auth.auth().currentUser!.uid
@@ -144,4 +144,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
         
     }
+    
+    
+    
 }

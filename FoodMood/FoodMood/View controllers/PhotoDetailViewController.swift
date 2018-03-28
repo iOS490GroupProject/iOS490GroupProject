@@ -7,6 +7,11 @@
 //
 
 import UIKit
+import Firebase
+import AlamofireImage
+import FirebaseAuth
+import FirebaseDatabase
+import FirebaseStorage
 
 class PhotoDetailViewController: UIViewController {
     
@@ -14,22 +19,19 @@ class PhotoDetailViewController: UIViewController {
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var recipe: UILabel!
     @IBOutlet weak var myTitle: UILabel!
+
     
-    var t: String = ""
-    var r: String = ""
-    var u: String = ""
-    var p: String = ""
+    var recipes: Recipe!
+    
+   
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        username.text = u
-        recipe.text = r
-        myTitle.text = t
-        
-        let data = NSData(contentsOf: NSURL(string: p)! as URL)
-        photo.image = UIImage(data: data! as Data)!
+        print(recipes.username)
+        username.text = recipes.username
+        recipe.text = recipes.recipe
+        myTitle.text = recipes.title
+        photo.af_setImage(withURL: URL(string: recipes.picture)! )
         
     }
 

@@ -13,6 +13,7 @@ class FoodClient {
     
     let recipeRef = Database.database().reference().child("Recipes")
     let recipeImageRef = Storage.storage().reference().child("RecipeImages")
+    let userRef = Database.database().reference().child("Users").child("UserDetails")
     
     
     func createRecipe(picture:UIImage, title:String, recipe:String, success: @escaping  (Recipe)->(), failure: @escaping  (Error)->()) {
@@ -70,6 +71,13 @@ class FoodClient {
             failure(error)
         }
     }
+    
+    func getUser(success: @escaping  ([Recipe])->(), failure: @escaping  (Error)->())
+    {
+        
+        
+    }
+    
 }
 
 

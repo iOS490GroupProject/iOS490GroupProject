@@ -32,9 +32,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         refresh = UIRefreshControl()
         refresh.addTarget(self, action: #selector(HomeViewController.didPullToRefresh(_:)), for: .valueChanged)
         collectionView.refreshControl = refresh
-        
-        
-        
+
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
         }
@@ -44,7 +42,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         let logoutAction = UIAlertAction(title: "Log Out", style: .destructive) { (action) in
             try! Auth.auth().signOut()
             if let storyboard = self.storyboard {
-                let vc = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! UIViewController
+                let vc = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
                 self.present(vc, animated: false, completion: nil)
             }
             
@@ -73,6 +71,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
                 self.collectionView.reloadData()
                 self.refresh.endRefreshing()
             }
+            
         }) { (error) in
             print(error.localizedDescription)
         }
@@ -100,25 +99,22 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         return cell
     }
     
-    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    //
-    //        let vc = segue.destination as! PhotoDetailViewController
-    //        let cell = sender as! UICollectionViewCell
-    //        let indexPath = collectionView.indexPath(for: cell)!
-    //
-    //
-    //            let t = photoTitle[indexPath.row]
-    //            vc.t = t
-    //            let u = photoUser[indexPath.row]
-    //            vc.u = u
-    //            let r = photoRecipe[indexPath.row]
-    //            vc.r = r
-    //            let p = photoImage[indexPath.row]
-    //            vc.p = p
-    //
-    //
-    //
-    //
-    //    }
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
+            if (segue.identifier == "viewPost") {
+            let vc = segue.destination as! PhotoDetailViewController
+                print("....goes here.... ")
+            let cell = sender as! UICollectionViewCell
+            let indexPath = collectionView.indexPath(for: cell)!
+            
+            let r = recipes[indexPath.row]
+            vc.recipes = r
+            } else if (segue.identifier == "addPost") {
+                let controller = segue.destination as! AddPhotoViewController
+            }
+    
+    
+        }
+    
+   
 }

@@ -182,6 +182,7 @@
 		D401C5C7203B989B006B1A11 /* FoodMood */ = {
 			isa = PBXGroup;
 			children = (
+				D4F379382069B582004D6F53 /* FoodClient.swift */,
 				D4F379332069B21C004D6F53 /* Models */,
 				204EC621206319070049E9EF /* View controllers */,
 				D401C5C8203B989B006B1A11 /* AppDelegate.swift */,
@@ -194,7 +195,6 @@
 				20418D82203E36B10013FC26 /* GoogleService-Info.plist */,
 				D4B2D39A20633856000B8836 /* AllVariables.swift */,
 				D414ACD32067FF7800D08087 /* PhotoCell.swift */,
-				D4F379382069B582004D6F53 /* FoodClient.swift */,
 			);
 			path = FoodMood;
 			sourceTree = "<group>";

@@ -234,7 +234,7 @@
                                         <color key="backgroundColor" red="0.1707904281" green="0.51441091189999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="myImage" destination="dpn-dr-uWY" id="BDQ-EM-vMf"/>
-                                            <segue destination="1Ge-6V-Cdi" kind="show" id="LMH-Pk-Ybi"/>
+                                            <segue destination="1Ge-6V-Cdi" kind="show" identifier="viewPost" id="LMH-Pk-Ybi"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -251,7 +251,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="NBd-U7-sFl">
                             <connections>
-                                <segue destination="RsN-LZ-ahZ" kind="push" id="MZE-JA-Adj"/>
+                                <segue destination="RsN-LZ-ahZ" kind="push" identifier="addPost" id="MZE-JA-Adj"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
