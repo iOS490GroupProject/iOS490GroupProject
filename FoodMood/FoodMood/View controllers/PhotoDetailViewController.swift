@@ -19,16 +19,26 @@ class PhotoDetailViewController: UIViewController {
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var recipe: UILabel!
     @IBOutlet weak var myTitle: UILabel!
-
+    let usernameRef = Database.database().reference().child("Users").child("UserDetails")
     
+    var user: String = ""
     var recipes: Recipe!
     
    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(recipes.username)
-        username.text = recipes.username
+        //username.text = recipes.username
+        
+     usernameRef.child(recipes.username).child("Username").observeSingleEvent(of: .value, with: { (snapshot) in
+        
+            if let item = snapshot.value as? String{
+                print ("inside here.....")
+                self.username.text = item
+            }
+        })
+        print(self.user)
+        
         recipe.text = recipes.recipe
         myTitle.text = recipes.title
         photo.af_setImage(withURL: URL(string: recipes.picture)! )

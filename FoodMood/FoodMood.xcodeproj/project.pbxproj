@@ -26,6 +26,7 @@
 		D414ACD82067FF9F00D08087 /* AddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D414ACD72067FF9F00D08087 /* AddPhotoViewController.swift */; };
 		D414ACDA2068032F00D08087 /* SearchRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D414ACD92068032F00D08087 /* SearchRecipeViewController.swift */; };
 		D414ACDC2068059A00D08087 /* SearchedDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D414ACDB2068059A00D08087 /* SearchedDetailsViewController.swift */; };
+		D45693E3206C2D81006B5902 /* searchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45693E2206C2D81006B5902 /* searchCell.swift */; };
 		D4AA9732204E0824008F3371 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AA9731204E0824008F3371 /* LoginViewController.swift */; };
 		D4B2D39B20633856000B8836 /* AllVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B2D39A20633856000B8836 /* AllVariables.swift */; };
 		D4B2D39D20633A08000B8836 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B2D39C20633A08000B8836 /* DetailsViewController.swift */; };
@@ -83,6 +84,7 @@
 		D414ACD72067FF9F00D08087 /* AddPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoViewController.swift; sourceTree = "<group>"; };
 		D414ACD92068032F00D08087 /* SearchRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRecipeViewController.swift; sourceTree = "<group>"; };
 		D414ACDB2068059A00D08087 /* SearchedDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedDetailsViewController.swift; sourceTree = "<group>"; };
+		D45693E2206C2D81006B5902 /* searchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchCell.swift; sourceTree = "<group>"; };
 		D4AA9731204E0824008F3371 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D4B2D39A20633856000B8836 /* AllVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllVariables.swift; sourceTree = "<group>"; };
 		D4B2D39C20633A08000B8836 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				20418D82203E36B10013FC26 /* GoogleService-Info.plist */,
 				D4B2D39A20633856000B8836 /* AllVariables.swift */,
 				D414ACD32067FF7800D08087 /* PhotoCell.swift */,
+				D45693E2206C2D81006B5902 /* searchCell.swift */,
 			);
 			path = FoodMood;
 			sourceTree = "<group>";
@@ -543,6 +546,7 @@
 			files = (
 				D414ACDA2068032F00D08087 /* SearchRecipeViewController.swift in Sources */,
 				D4B2D39B20633856000B8836 /* AllVariables.swift in Sources */,
+				D45693E3206C2D81006B5902 /* searchCell.swift in Sources */,
 				D4F379392069B582004D6F53 /* FoodClient.swift in Sources */,
 				D414ACD42067FF7800D08087 /* PhotoCell.swift in Sources */,
 				D414ACDC2068059A00D08087 /* SearchedDetailsViewController.swift in Sources */,

@@ -19,5 +19,83 @@
             landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FoodMood/View controllers/SearchRecipeViewController.swift"
+            timestampString = "543961455.699602"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "SearchRecipeViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FoodMood.SearchRecipeViewController.names.getter : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "FoodMood"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dhritichawla/Desktop/iOS%20Group%20Project/iOS490GroupProject/FoodMood/FoodMood/View%20controllers/SearchRecipeViewController.swift"
+                  timestampString = "543961329.921633"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "109">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FoodMood.SearchRecipeViewController.names.setter : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "FoodMood"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dhritichawla/Desktop/iOS%20Group%20Project/iOS490GroupProject/FoodMood/FoodMood/View%20controllers/SearchRecipeViewController.swift"
+                  timestampString = "543961329.925164"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FoodMood.SearchRecipeViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; FoodMood.SearchRecipeViewController"
+                  moduleName = "FoodMood"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dhritichawla/Desktop/iOS%20Group%20Project/iOS490GroupProject/FoodMood/FoodMood/View%20controllers/SearchRecipeViewController.swift"
+                  timestampString = "543961329.927987"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "536">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FoodMood.SearchRecipeViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;FoodMood.SearchRecipeViewController&gt;"
+                  moduleName = "FoodMood"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dhritichawla/Desktop/iOS%20Group%20Project/iOS490GroupProject/FoodMood/FoodMood/View%20controllers/SearchRecipeViewController.swift"
+                  timestampString = "543961329.930638"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "457">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
