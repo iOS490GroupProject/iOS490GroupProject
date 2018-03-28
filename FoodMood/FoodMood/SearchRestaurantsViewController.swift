@@ -77,11 +77,8 @@ class SearchRestaurantsViewController: UIViewController, UISearchBarDelegate {
                 let span = MKCoordinateSpanMake(0.1, 0.1)
                 let region = MKCoordinateRegionMake(coordinate, span)
                 self.mapView.setRegion(region, animated: true)
-                
-                
             }
-        
-            
+ 
         }
     }
 }

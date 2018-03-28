@@ -7,29 +7,38 @@
 //
 
 import UIKit
+import Firebase
 
 class SearchedDetailsViewController: UIViewController {
 
+    @IBOutlet weak var photo: UIImageView!
+    @IBOutlet weak var username: UILabel!
+    @IBOutlet weak var recipe: UILabel!
+    @IBOutlet weak var myTitle: UILabel!
+    let usernameRef = Database.database().reference().child("Users").child("UserDetails")
+    
+    var user: String = ""
+    var recipes: Recipe!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        //username.text = recipes.username
+        
+        usernameRef.child(recipes.username).child("Username").observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            if let item = snapshot.value as? String{
+                //print ("inside here.....")
+                self.username.text = item
+            }
+        })
+        print(self.user)
+        
+        recipe.text = recipes.recipe
+        myTitle.text = recipes.title
+        photo.af_setImage(withURL: URL(string: recipes.picture)! )
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

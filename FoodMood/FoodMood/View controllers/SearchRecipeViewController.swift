@@ -15,11 +15,10 @@ class SearchRecipeViewController: UIViewController, UITableViewDataSource, UITab
     
     
     let searchBar = UISearchBar()
-    var courseData = [[String: AnyObject]]()
+    //var courseData = [[String: AnyObject]]()
   //  var titles: [Recipe] = []
     var recipes: [Recipe] = []
-    
-    // var numbers = [String]()
+    var recipeSearch = [Recipe]()
     
     var filteredArrayName: [Recipe] = []
     var showSearchResults = false
@@ -52,17 +51,23 @@ class SearchRecipeViewController: UIViewController, UITableViewDataSource, UITab
     func fetchData() {
         FoodClient.sharedInstance.getRecipes(success: { (recipes) in
             self.recipes = recipes
+            
             DispatchQueue.main.async {
+                
                 self.tableView.reloadData()
                 self.refresh.endRefreshing()
             }
             
+//            for i in 0...self.recipes.count-1 {
+//               print ()
+//
+//            }
+
+            self.recipeSearch = (AllVariables.recs)
+            
         }) { (error) in
             print(error.localizedDescription)
         }
-        
-        
-        
     }
     
     func createSearchBar() {
@@ -78,12 +83,17 @@ class SearchRecipeViewController: UIViewController, UITableViewDataSource, UITab
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         let mySearch = searchBar.text!
-//        filteredArrayName = names.filter({( name: String) -> Bool in
-//            return name.lowercased().range(of:searchText.lowercased()) != nil
-//        })
+        filteredArrayName = recipes.filter({( recipe: Recipe) -> Bool in
+            let name = recipe.recipe
+             return name.lowercased().range(of:searchText.lowercased()) != nil
+       })
+        
+        print (".....here.....")
+        print (filteredArrayName)
         
         
-        if searchBar.text == "" {
+        
+        if mySearch == "" {
             showSearchResults = false
             self.tableView.reloadData()
         } else {
@@ -95,6 +105,7 @@ class SearchRecipeViewController: UIViewController, UITableViewDataSource, UITab
     
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         searchBar.endEditing(true)
+       
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -110,7 +121,7 @@ class SearchRecipeViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     @objc func didPullToRefresh(_ refreshControl: UIRefreshControl) {
-        self.viewDidLoad()
+        fetchData()
     }
     
     // MARK: - Table view data source
@@ -131,7 +142,7 @@ class SearchRecipeViewController: UIViewController, UITableViewDataSource, UITab
         if (showSearchResults){
             
             let nam = filteredArrayName[indexPath.row]
-            //cell.recipes = nam
+            cell.recipes = nam
             
         }
         else {
@@ -139,6 +150,27 @@ class SearchRecipeViewController: UIViewController, UITableViewDataSource, UITab
             cell.recipes = rec
         }
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        
+            let vc = segue.destination as! SearchedDetailsViewController
+            //print("....goes here.... ")
+            let cell = sender as! UITableViewCell
+            let indexPath = tableView.indexPath(for: cell)!
+        
+        if (showSearchResults){
+            let r = filteredArrayName[indexPath.row]
+            vc.recipes = r
+            
+        } else {
+            
+            let r = recipes[indexPath.row]
+            vc.recipes = r
+        }
+        
+        
     }
     
 

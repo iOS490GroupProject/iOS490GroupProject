@@ -16,6 +16,7 @@ struct AllVariables {
     static var uid: String = ""
     static var profpic: String = ""
     static var photos = [String]()
+    static var recs = [Recipe]()
    
 }
 

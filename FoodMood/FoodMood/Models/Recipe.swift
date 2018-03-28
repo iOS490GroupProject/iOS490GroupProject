@@ -21,4 +21,7 @@ class Recipe: NSObject {
         username = recipeInfo["User"] as! String
         title = recipeInfo["Title"] as! String
     }
+    
+//    if (!AllVariables.recs.contains(recipe)) {
+//    AllVariables.recs.append(recipe) }
 }

@@ -13,10 +13,14 @@ class searchCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var recipe: UILabel!
     
+    
     var recipes: Recipe! {
         didSet {
             title.text = recipes.title
             recipe.text = recipes.recipe
+            
+//            if (!AllVariables.recs.contains(recipes.recipe)) {
+//                AllVariables.recs.append(recipes.recipe) }
             
         }
     }
