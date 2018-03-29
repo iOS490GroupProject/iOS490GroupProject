@@ -10,14 +10,14 @@ The following **required** functionality is completed:
 
 - [x] I would like to create an account
 - [x] I would like to upload my profile photo
-- [ ] I would like to view recipes based on food items
+- [X] I would like to view recipes based on food items
 - [x] I would like to upload photos of the dishes i cook
 - [x] I would like to view a news feed of user uploaded photos of food
-- [ ] I would like to tap on a photo to view the details
+- [X] I would like to tap on a photo to view the details
 - [x] I would like to view nearby restaurants
 - [?] I would like to view nearby groceries
 - [?] I would like to chat with people and share recipes
-- [ ] I would like to use the app on different iOS devices
+- [X] I would like to use the app on different iOS devices
 
 
 The following **optional** features are implemented:
