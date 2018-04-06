@@ -102,7 +102,11 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="u3C-Kv-DfX" appends="YES" id="R9U-J2-Ifw"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="emailField" destination="Nj1-Qk-PWq" id="Lfc-dD-hbp"/>
@@ -112,6 +116,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="u3C-Kv-DfX">
+                    <connections>
+                        <action selector="onTap:" destination="BYZ-38-t0r" id="nCX-xM-a4i"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="125.59999999999999" y="-11.244377811094454"/>
         </scene>
@@ -207,7 +216,11 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="QZa-RX-H5n"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="fZW-CT-ln3" appends="YES" id="5Mh-Bi-Ff2"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="Fname" destination="xTg-GO-qhw" id="ElZ-4f-0JY"/>
@@ -218,6 +231,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wea-7I-Lal" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="fZW-CT-ln3">
+                    <connections>
+                        <action selector="onTap:" destination="XcK-iy-hSh" id="mjO-fE-f6w"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1440.8" y="-11.244377811094454"/>
         </scene>
@@ -470,7 +488,11 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="Ts8-gb-A38"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Qzj-9b-kgV" appends="YES" id="8e4-N5-S4w"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="ProfilePictureImage" destination="hLX-bh-oZG" id="H6Z-B7-2OF"/>
@@ -478,6 +500,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLV-Bs-edF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Qzj-9b-kgV">
+                    <connections>
+                        <action selector="onTap:" destination="c6g-PJ-5dU" id="fAM-LK-Zlm"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1885.5999999999999" y="3521.2893553223389"/>
         </scene>
@@ -579,7 +606,11 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="GSt-wg-hST"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="WZC-P8-LYj" appends="YES" id="EUA-iy-CEV"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="thG-hh-nAA"/>
                     <connections>
@@ -589,6 +620,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0QA-I8-4cW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="WZC-P8-LYj">
+                    <connections>
+                        <action selector="onTap:" destination="RsN-LZ-ahZ" id="gsm-N6-ibY"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-2154.4000000000001" y="2805.2473763118442"/>
         </scene>
@@ -734,7 +770,11 @@ Combine egg, milk, oil. Add to dry. Stir until moistened.</string>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="Cx7-NZ-5Oc"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="9Lg-ag-5Sj" appends="YES" id="j2Y-lE-H6z"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="gqS-OV-W5h"/>
                     <connections>
@@ -743,6 +783,7 @@ Combine egg, milk, oil. Add to dry. Stir until moistened.</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4CI-TD-UId" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="9Lg-ag-5Sj"/>
             </objects>
             <point key="canvasLocation" x="3733.5999999999999" y="1894.9025487256374"/>
         </scene>
@@ -867,6 +908,6 @@ Combine egg, milk, oil. Add to dry. Stir until moistened.</string>
         <image name="icons8-search-filled-35" width="35" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="d6z-i1-YHJ"/>
+        <segue reference="kko-b2-nIO"/>
     </inferredMetricsTieBreakers>
 </document>

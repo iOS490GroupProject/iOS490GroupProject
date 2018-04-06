@@ -134,5 +134,11 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     
     
+    @IBAction func onTap(_ sender: Any) {
+        
+        view.endEditing(true)
+    }
+    
+    
     
 }
